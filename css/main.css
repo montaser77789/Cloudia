@@ -309,6 +309,62 @@
     text-align: center;
     letter-spacing: 1px;
   }
+  .projects-title{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    .overlay h3 {
+      font-size: 1.2rem; /* تكبير الخط في الشاشات الكبيرة */
+    }
+    
+    .project-card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .project-card:hover .overlay {
+      opacity: 1;
+    }
+    
+    .overlay h3 {
+      font-size: 1.2rem; /* تكبير الخط في الشاشات الكبيرة */
+    }
+    
+    .overlay p {
+      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    }
+    
+    .overlay a {
+      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    }
+    
+    .overlay i {
+      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    }
+    
+    .overlay button { /* تحسين النصوص في الشاشات الأكبر */
+      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    }
+    
+    .overlay h4 { /* تحسين النصوص في الشاشات الأكبر */
+      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    }
+    
+    .overlay h5 { /* تحسين النصوص في الشاشات الأكبر */
+      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    }
+    .project-card img {
+      height: auto;
+    }
+    
+  }
   
   /* //////////////////////Services////////////////////// */
   .services-section {
