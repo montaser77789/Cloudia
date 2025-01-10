@@ -28,7 +28,7 @@
   }
   .navbar-nav li a {
     color: #fff !important;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
   }
   
@@ -48,6 +48,9 @@
     transition: all 0.3s ease-in-out;
     position: relative;
     padding: 30px 0;
+    color: #fff !important;
+    font-size: 18px;
+    font-weight: 500;
   }
   
   .navbar-nav .nav-link:hover {
@@ -55,7 +58,7 @@
     color: #333 !important;
     border-radius: 5px;
     font-weight: bold;
-    padding-right: 50px;
+    padding-right: 60px;
     transition: all 0.3s ease-in-out;
     opacity: 0.7;
   }
@@ -98,6 +101,8 @@
     border-color: #7b59b4;
     padding: 10px 20px;
     margin: 10px;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
 
   }
 .btn-login-container .btn-outline-light {
@@ -274,6 +279,9 @@
   
   .project-card img {
     transition: transform 0.5s ease;
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
   }
   
   .project-card:hover img {
@@ -488,7 +496,7 @@
       text-align: center;
     }
     .navbar-nav .nav-link {
-      padding: 10px 20px;
+      padding: 20px 20px;
       font-size: 1.2rem;
     }
     .footer h5 {
