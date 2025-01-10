@@ -559,4 +559,40 @@
       margin-top: 20px;
     }
   }
+
+
+  #home {
+    background-color: #1e1e1e; /* أسود */
+    color: white;
+  }
+
+  #projects {
+    background-color: #333333; /* رمادي غامق */
+    color: white;
+  }
+
+  #services {
+    background-color: #444444; /* رمادي أفتح */
+    color: white;
+  }
+
+  #team {
+    background-color: #2e2e2e; /* بين الأسود والرمادي */
+    color: white;
+  }
+
+  #map {
+    background-color: #1f1f1f; /* أسود أغمق */
+    color: white;
+  }
+
+  #footer {
+    background-color: #121212; /* أسود داكن جدًا */
+    color: white;
+  }
+
+  /* لضبط الهوامش والارتفاع */
+  section {
+    padding: 60px 0;
+  }
   
