@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: 'MyCustomFont'; /* اسم الفونت */
+    src: url('../font/SanaaPro-Bold.otf') format('opentype'),
+         url('../font/SanaaPro-Regular.otf') format('opentype');
+    font-weight: normal; /* الوزن الافتراضي للفونت */
+    font-style: normal;  /* النمط الافتراضي للفونت */
+}
+
+
+  body,
+  html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+    font-family: 'MyCustomFont' ;
+  }
+  h1, h2, h3, h4, h5, h6 ,p , a  { 
+    font-family: 'MyCustomFont', serif;
+}
+
+  
+  
+  nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: #333;
+    opacity: 0.9;
+  }
+  .navbar {
+    background-color: black !important;
+    border: none !important;
+  }
+  .navbar-nav li a {
+    color: #fff !important;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .navbar-toggler i {
+    font-size: 40px;
+    color: #fff !important;
+  }
+  .navbar-toggler {
+    outline: none !important;
+  }
+  .logo-img {
+    width: 100px;
+    height: 80px;
+  }
+  .navbar-nav .nav-link {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    padding: 30px 50px; 
+    margin: 0 10px;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 500;
+
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #f0f0f0;
+    color: #333 !important;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-right: 120px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+  }
+  
+  .navbar-collapse.collapse {
+    transition: max-height 0.4s ease-in-out;
+  }
+  .navbar-collapse {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .collapse.show {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+  .collapse {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+  
+  .map-section {
+    background-color: #f8f9fa;
+  }
+  
+  .map-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .btn-login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-login {
+    background-color: #7b59b4;
+    border-color: #7b59b4;
+    padding: 10px 20px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+
+  }
+.btn-login-container .btn-outline-light {
+    border: 2px solid #7b59b4; 
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    background-color: #7b59b4;
+    padding: 10px 20px;
+  }
+  
+  .btn-login-container .btn-outline-light:hover {
+    background-color: #7b59b4;
+    color: #ffffff;
+    border: 2px solid #ffffff; 
+  }
+  
+  .dropdown-menu {
+    background-color: #333; 
+    border: none; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .dropdown-menu .dropdown-item {
+    color: #ffffff; 
+    font-weight: 500; 
+    padding: 10px 20px; 
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #7b59b4; 
+    color: #ffffff;
+  }
+  
+  .animate__animated.animate__fadeIn {
+    animation-duration: 0.3s;
+  }
+
+/* //////////////////////FOOTER////////////////////// */
+.footer h5 {
+    font-weight: bold;
+    margin-top: 100px;
+  }
+  
+  .footer hr {
+    border: none;
+    border-top: 2px solid #7b59b4;
+  }
+  
+  .footer .logo {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  .footer a {
+    transition: color 0.3s ease-in-out;
+  }
+
+  .footer a,
+  .footer h5,
+  .footer p,
+  .footer i {
+    transition: color 0.3s ease-in-out;
+  }
+  .footer a:hover,
+  .footer h5:hover,
+  .footer p:hover,
+  .footer i:hover {
+    color: #7b59b4 !important;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-nav .nav-link {
+      padding: 20px 20px;
+      font-size: 1.2rem;
+    }
+    .footer h5 {
+      margin-top: 20px;
+    }
+  }
+
+
+  .footer-text {
+
+    padding-right: 60px;
+  }
+  
+  /* ///////////////////// projects-title///////////////// */
+  .projects-title-section {
+    position: relative;
+    background: url('../images/cloudia\ svg\ 3.svg') center center / cover no-repeat;
+    opacity: 0.9; 
+    z-index: 1;
+    padding: 50px 0; 
+    background-attachment: fixed;
+    background-color: #000;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .projects-title-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); 
+    z-index: -1;
+  }
+  .projects-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 120px 0;
+    font-size: 4rem;
+    color: #fff;
+    position: relative;
+  }
+  .projects-title  {
+
+  }
+
+   /* //////////////////////Projects////////////////////// */
+   .projects-section {
+    color: #fff;
+  }
+  #projects {
+
+    background-color: #000;
+
+  }
+  
+
+  
+  .projects-section h2 {
+    font-size: 2rem;
+    color: #fff;
+    position: relative;
+  }
+  
+  .project-card {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .project-card img {
+    transition: transform 0.5s ease;
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.1); /* تكبير الصورة عند الهوفر */
+  }
+  
+  .project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .project-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .projects-title{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    .overlay h3 {
+      font-size: 1.2rem; 
+    }
+    
+    .project-card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .project-card:hover .overlay {
+      opacity: 1;
+    }
+    
+    .overlay h3 {
+      font-size: 1.2rem;
+    }
+    
+    .overlay p {
+      font-size: 1rem; 
+    }
+    
+    .overlay a {
+      font-size: 1rem; 
+    }
+    
+    .overlay i {
+      font-size: 1rem; 
+    }
+    
+    .overlay button {
+      font-size: 1rem;
+    }
+    
+    .overlay h4 { 
+      font-size: 1rem; 
+    }
+    
+    .overlay h5 { 
+      font-size: 1rem; 
+    }
+    .project-card img {
+      height: auto;
+    }
+    
+  }

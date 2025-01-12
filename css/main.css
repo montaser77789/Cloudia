@@ -3,15 +3,29 @@
     padding: 0;
     box-sizing: border-box;
   }
+  @font-face {
+    font-family: 'MyCustomFont'; /* اسم الفونت */
+    src: url('../font/SanaaPro-Bold.otf') format('opentype'),
+         url('../font/SanaaPro-Regular.otf') format('opentype');
+    font-weight: normal; /* الوزن الافتراضي للفونت */
+    font-style: normal;  /* النمط الافتراضي للفونت */
+}
+
+
   body,
   html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: #000000;
   }
   html {
     scroll-behavior: smooth;
+    font-family: 'MyCustomFont' ;
   }
+  h1, h2, h3, h4, h5, h6 ,p , a  { 
+    font-family: 'MyCustomFont', serif;
+}
+
+  
   
   nav {
     position: fixed !important;
@@ -20,7 +34,7 @@
     right: 0;
     z-index: 9999;
     background-color: #333;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   .navbar {
     background-color: black !important;
@@ -44,13 +58,14 @@
     height: 80px;
   }
   .navbar-nav .nav-link {
-    padding: 10px 20px;
     transition: all 0.3s ease-in-out;
     position: relative;
-    padding: 30px 0;
+    padding: 30px 50px; 
+    margin: 0 10px;
     color: #fff !important;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
+
   }
   
   .navbar-nav .nav-link:hover {
@@ -58,7 +73,7 @@
     color: #333 !important;
     border-radius: 5px;
     font-weight: bold;
-    padding-right: 60px;
+    padding-right: 120px;
     transition: all 0.3s ease-in-out;
     opacity: 0.7;
   }
@@ -173,8 +188,7 @@
     text-transform: uppercase;
     letter-spacing: 4px; /* زيادة المسافة بين الحروف والأرقام */
     margin-bottom: 1rem;
-    color: #7b59b4;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
 }
 
   .text-overlay p {
@@ -184,36 +198,40 @@
   
   @media (max-width: 768px) {
     .video-container {
-      display: flex;
-      flex-direction: column;
-      height: auto; 
+      height: 80vh;
     }
-  
-    .video-container video {
-      width: 100%;
-      height: 50vh;
-    }
-  
     .text-overlay {
-      position: static;
-      transform: none;
-      margin-top: 10px;
-      padding: 0 40px 0 10px;
-      text-wrap: wrap;
-      text-align: left;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      z-index: 2;
+      text-wrap: nowrap;
+      text-align: center;
+      width: 100%;
     }
+
+
   
     .text-overlay h1 {
-      font-size: 46px;
-      font-weight: 700;
-      line-height: 46px;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 4px; /* زيادة المسافة بين الحروف والأرقام */
+        margin-bottom: 1rem;
+        color: #fff;
+        text-wrap: wrap;
+        padding: 0 20px;
+    
     }
   
     .text-overlay p {
-        padding: 0 60px 25px 0;
-        font-size: 18px;
-        line-height: 28px;
-        color: #ccc;
+      font-size: 1rem;
+      font-weight: 400;
+      text-wrap: wrap;
+      padding: 0 20px;
+     
     }
   }
   
@@ -228,17 +246,15 @@
   .welcome-title {
     font-size: 2.5rem;
     font-weight: bold;
+    padding: 50px 0 20px 0;
     letter-spacing: 1px;
-  }
-  
-  .welcome-title .highlight {
-    color: #7b59b4; /* لون مميز لكلمة HAMA */
   }
   
   .welcome-text {
     font-size: 1rem;
     line-height: 1.8;
     color: #cccccc;
+    padding: 0 0 50px 0;
   }
   
   @media (min-width: 992px) {
@@ -262,9 +278,32 @@
   
   /* //////////////////////Projects////////////////////// */
   .projects-section {
-    background-color: #121212; /* خلفية داكنة */
     color: #fff;
   }
+  #projects {
+    position: relative;
+    background: url('../images/cloudia\ svg\ 3.svg') center center / cover no-repeat;
+    opacity: 0.9; 
+    z-index: 1;
+    padding: 50px 0; 
+    background-attachment: fixed;
+    background-color: #000;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  #projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); 
+    z-index: -1;
+  }
+  
   
   .projects-section h2 {
     font-size: 2rem;
@@ -275,6 +314,7 @@
   .project-card {
     overflow: hidden;
     border-radius: 8px;
+    cursor: pointer;
   }
   
   .project-card img {
@@ -315,7 +355,7 @@
   }
   @media screen and (max-width: 768px) {
     .overlay h3 {
-      font-size: 1.2rem; /* تكبير الخط في الشاشات الكبيرة */
+      font-size: 1.2rem; 
     }
     
     .project-card .overlay {
@@ -334,31 +374,31 @@
     }
     
     .overlay h3 {
-      font-size: 1.2rem; /* تكبير الخط في الشاشات الكبيرة */
+      font-size: 1.2rem;
     }
     
     .overlay p {
-      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+      font-size: 1rem; 
     }
     
     .overlay a {
-      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+      font-size: 1rem; 
     }
     
     .overlay i {
-      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+      font-size: 1rem; 
     }
     
-    .overlay button { /* تحسين النصوص في الشاشات الأكبر */
-      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    .overlay button {
+      font-size: 1rem;
     }
     
-    .overlay h4 { /* تحسين النصوص في الشاشات الأكبر */
-      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    .overlay h4 { 
+      font-size: 1rem; 
     }
     
-    .overlay h5 { /* تحسين النصوص في الشاشات الأكبر */
-      font-size: 1rem; /* تحسين النصوص في الشاشات الأكبر */
+    .overlay h5 { 
+      font-size: 1rem; 
     }
     .project-card img {
       height: auto;
@@ -562,32 +602,39 @@
 
 
   #home {
-    background-color: #1e1e1e; /* أسود */
+    background-color: #272727; 
     color: white;
   }
 
-  #projects {
-    background-color: #333333; /* رمادي غامق */
+
+#projects {
+    background-color: #000;
     color: white;
   }
-
   #services {
-    background-color: #444444; /* رمادي أفتح */
+    background-color: #000; 
     color: white;
   }
 
   #team {
-    background-color: #2e2e2e; /* بين الأسود والرمادي */
-    color: white;
+    background-color: #272727;
+    color: white;    
   }
 
   #map {
-    background-color: #1f1f1f; /* أسود أغمق */
+    background-color: #1f1f1f; 
     color: white;
   }
 
   #footer {
-    background-color: #121212; /* أسود داكن جدًا */
+    background-color: #000; 
     color: white;
   }
 
+  
+  .line {
+    width: 150px;
+    height: 2px;
+    background-color: #7b59b4;
+    margin: 30px auto;
+  }
